@@ -1,0 +1,65 @@
+.SidebarMenu {
+  position: fixed;
+  z-index: 500;
+  width: 100%;
+  height: 90%;
+  background: linear-gradient(180deg, #49494a 17.19%, #383836 100%);
+
+  nav {
+    margin-top: 15px;
+    margin-left: 15px;
+    position: relative;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+
+      li {
+        margin-bottom: 38px;
+        position: relative;      
+
+        a {        
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 21px;
+          color: #ffffff;
+          text-decoration: none;          
+        }
+              .nested::after{
+                content: '\3E';
+                font-size: 23px;
+                margin-left: 290px;
+        }
+        
+      }
+      li::after {
+        position: absolute;
+        content: "";
+        width: 95%;
+        height: 2px;
+        background: rgba(228, 181, 107, 0.5);
+        top: 42px;
+        left: 0;
+      }
+    }
+    .lang-menu {
+      position: absolute;
+      width: 133px;
+      display: flex;
+      right: 75px;
+      z-index: 500;
+
+      .lang {
+          margin-left: 20px;
+        img {
+          width: 31px;
+          height: 21px;
+        }
+      }
+      .opacity{
+          opacity: .3;
+      }
+    }
+  }
+}

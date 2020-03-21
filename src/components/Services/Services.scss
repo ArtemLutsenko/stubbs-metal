@@ -1,0 +1,211 @@
+.servises {
+  position: relative;
+  width: 1360px;
+  margin: 0 auto;
+
+  &__container {
+    width: 1180px;
+    margin: 30px auto;
+
+    .servises__menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 42px;
+
+      .serv__item {
+        min-width: 32%;
+        height: 201px;
+        flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 7.5px 15px;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        overflow: hidden;
+
+        &-bg-image {
+          background-position: center;
+          background-size: cover;
+          width: 100%;
+          height: 100%;
+        }
+
+        .serv__item-bg-image::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(0, 0, 0, 0);
+          z-index: 2;
+        }
+
+        &-text-wrapper {
+          position: absolute;
+          left: 0;
+          top: 32px;
+          width: 333px;
+          height: 56px;
+          background: rgba(62, 62, 62, 0.9);
+          z-index: 10;
+          text-align: left;
+
+          h3 {
+            color: #ffffff;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 55px;
+            margin-left: 15px;
+          }
+        }
+
+        &-text-wrapper::after {
+          position: absolute;
+          content: "";
+          background: #e4b56b;
+          width: 2px;
+          height: 46px;
+          top: 0;
+          right: 10px;
+        }
+      }
+      @media (min-width: 641px) {
+        .serv__item:hover {
+          cursor: pointer;
+
+          .serv__item-bg-image {
+            transform: scale(1.05);
+            transition: all 1s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+          }
+          .serv__item-bg-image::after {
+            background: rgba(0, 0, 0, 0.4);
+            transition: all 1s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+          }
+          .serv__item-text-wrapper {
+            width: 295px;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            transition: all 1s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+          }
+
+          .serv__item-text-wrapper::after {
+            right: 293px;
+            height: 56px;
+            transition: all 1s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+          }
+        }
+      }
+    }
+  }
+  &__button {
+    margin: 20px auto 0;
+    width: 379px;
+    height: 43px;
+    background: #454647;
+    color: white;
+    text-align: center;
+    padding-top: 12px;
+  }
+  &__button.small{
+    display: none;
+  }
+  &__button:hover {
+    cursor: pointer;
+  }
+
+  .bg-detail {
+    width: 286px;
+    height: 286px;
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+  .detail1 {
+    top: 130px;
+    right: -25px;
+  }
+
+  .detail2 {
+    transform: rotate(60deg);
+    top: 370px;
+    right: 30px;
+  }
+  .detail3 {
+    transform: rotate(-135deg);
+    top: 180px;
+    left: -25px;
+  }
+  .detail4 {
+    transform: rotate(-135deg);
+    top: 410px;
+    left: -15px;
+  }
+}
+
+@media (max-width: 640px) {
+  .servises {
+    width: 100%;
+    min-width: 360px;
+
+    &__container {
+      width: 95%;
+      margin: 20px auto;
+
+      .servises__menu {
+        margin-top: 27px;
+
+        .serv__item {
+          min-width: 45%;
+          height: 105px;
+          margin: 0 5px 10px;
+
+          &-text-wrapper {
+            width: 95%;
+            height: 36px;
+            display: flex;
+            align-items:center;
+            cursor: pointer;
+
+            h3 {
+              font-size: 12px;
+              line-height: 14px;
+              margin-left: 15px;
+              margin-right: 15px;
+            }
+          }
+
+          &-text-wrapper::after {
+            height: 23px;
+          }
+        }
+        
+      }
+    }
+    &__button {
+      width: 100%;
+      height: 36px;;
+      background: #454647;
+      color: white;
+      font-size: 14px;
+      padding-top: 10px;
+    }
+    &__button.small{
+      display: block;
+    }
+
+    &__button.big{
+      display: none;
+    }  
+
+    .bg-detail {
+      display: none;
+    }
+  }
+}

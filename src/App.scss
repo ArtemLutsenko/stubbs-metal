@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+.app {
+  width: 1360px;
+}
+
+.h2-style {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 60px;
+  position: relative;
+  text-align: center;
+}
+
+.h2-style::after{
+    content: "";
+    position: absolute;
+    width: 82px;
+    height: 2px;
+    background: #E4B56B;
+    top: 66px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 640px) {
+  .h2-style {
+    font-size: 20px;
+    line-height: 23px;
+  }
+  
+  .h2-style::after{
+      width: 60px;
+      top: 28px;
+  }
+}
+
